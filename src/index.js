@@ -4,6 +4,8 @@ import express from "express"
 
 const app=express()
 
+app.use(express.json())
+
 
 dotenv.config({
     path:'./env'
@@ -13,7 +15,7 @@ dotenv.config({
 
 
 connectDB().then(()=>{
-  app.listen(process.env.PORT || 8000,()=>{
+  app.listen(process.env.PORT ,()=>{
     console.log(`the server is running on port ${process.env.PORT}`);
     
   })  

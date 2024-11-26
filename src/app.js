@@ -1,6 +1,7 @@
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
+const app=express()
 
 app.use(cors({
     origin:process.env.CORS_ORIGIN,
@@ -17,4 +18,19 @@ app.use(express.static("public"))
 app.use(express.cookieParser())
 
 
-const app=express()
+//routes import
+import userRouter from "./routes/user.routes.js"
+
+//routes declaration
+app.use("/api/v1/users", userRouter)
+
+app.use((req, res, next) => {
+    res.status(404).send({ error: 'Route not found' });
+});
+
+
+
+app.listen(8000,()=>{
+    console.log("server is running on port 8000")
+}
+)
