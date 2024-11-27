@@ -6,7 +6,7 @@ const asyncHandler =(requestHandler)=>{
     }
 }
 
-export{asyncHandler}
+export{asyncHandler};
 
 //type 1:using try catch
 // const asyncHandler=(func)=>async(req,res,next)=>{
