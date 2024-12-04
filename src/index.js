@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import cors from "cors"
 import express from "express" 
 
+
 //routes import
 import userRouter from "./routes/user.routes.js"
 //routes declaration
