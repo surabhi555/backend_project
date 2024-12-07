@@ -361,4 +361,7 @@ export { registerUser, loginUser,
     getCurrentUser,changeCurrentPassword,
     updateAccountDetails ,
     updateUserAvatar,
-    updateUserCoverImage};
+    updateUserCoverImage,
+    getUserChannelProfile};
+
+    //done
